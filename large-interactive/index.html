@@ -1,0 +1,202 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <!--[if lt IE 9]>
+        <script defer src="js/ie8isterrible.js"></script>
+    <![endif]-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title Goes Here</title>
+    <link rel="stylesheet" href="css/foundation.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr.js"></script>
+    <script>
+        var ad_web_service = '';
+        var utag_data= {
+            cst: ad_web_service,
+            instance: 'prod', /* or 'qa' or 'prod' */
+            partner_type: 'cobrand',
+            pathName: 'http://php.delawareonline.com'+document.location.pathname,
+            profile: 'wilmington',
+            ssts: 'news/local'
+        };
+        function cobrandPageLoad(utag_data) {
+            if (window.utag) {
+                window.utag.view(utag_data);
+            } else {
+                utag_data.partner_type= 'basic';
+                window.utag_data= utag_data;
+                var profile= utag_data.profile || 'unspecifiedprofile';
+                var instance= utag_data.instance || 'unspecifiedinstance';
+                var uscript = document.createElement('script');
+                uscript.async = true;
+                uscript.type = 'text/javascript';
+                uscript.src = '//tealium.hs.llnwd.net/o43/utag/gci/'+profile+'/'+instance+'/utag.js';
+                var node = document.getElementsByTagName('script')[0];
+                node.parentNode.insertBefore(uscript, node);
+            }
+        }
+    </script>
+    <script type="text/javascript" src="//www.delawareonline.com/static/js/cobrand/partner.js"></script>
+</head>
+<body onload="cobrandPageLoad(utag_data);">
+    <iframe class="cobrand-header" src="//www.delawareonline.com/services/cobrand/header/" frameborder="0" scrolling="no"></iframe>
+    <div style="height:40px;" id="top">&nbsp; <!-- Push elements below header. --> </div>
+    <div class="main-intro">
+        <div class="row">
+            <h1 class="main-header">
+                Short Headline Here
+            </h1>
+            <h3 class="main-subhead">
+                A subheadline that is roughly 16 or fewer words long.
+            </h3>
+            <p>
+                Main introduction goes here. <span class="chatter-emphasis">This is a .chatter-emphasis.</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, amet, eum, aut nisi quibusdam quaerat laudantium voluptas tempore velit facilis sapiente voluptatem aperiam ullam pariatur dicta nemo fugiat quae doloribus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, nemo, cum est itaque sint et maxime delectus ut soluta eum cupiditate sit! Repudiandae doloremque maiores atque praesentium beatae saepe ullam.
+            </p>
+            <div class="small-6 columns">
+                <p>
+                    <strong>[Design/Reporting/Analysis] by:</strong> <a href="mailto:user@delawareonline.com">Byline</a>
+                </p>
+            </div>
+            <div class="small-6 columns">
+                <p>
+                    <strong>Related story:</strong> <a href="#related-story-link">Related story headline</a>
+                </p>
+            </div>
+            <div class="small-12 columns">
+                <div class="section-nav">
+                    <ul class="button-group">
+                        <li>
+                            <a class="button small" href="#section-1">Section One Button</a>
+                        </li>
+                        <li>
+                            <a class="button small" href="#section-2">Section Two Button</a>
+                        </li>
+                        <li>
+                            <a class="button small" href="#section-3">Section Three Button</a>
+                        </li>
+                        <li>
+                            <a class="button small" href="#about-the-data">About the data</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SECTION ONE -->
+    <div class="row">
+        <hr>
+        <div class="small-12 columns">
+            <h2 class="section-head" id="section-1">
+                Short section headline <a class="anchor-link" href="#section-1">&#182;</a>
+            </h2>
+        </div>
+        <div class="small-12 columns">
+            <p class="section-chatter">
+                Chatter for this section goes here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, dolorum, tempora neque dolorem a illum quibusdam id debitis odit illo similique magnam deserunt tempore ea consectetur veritatis suscipit ab animi.
+            </p>
+        </div>
+        <div class="small-12 columns section-content">
+            <p>
+                <strong>Section Content [table, graph, whatnot] goes here.</strong>
+            </p>
+        </div>
+        <div class="clearfix">
+            <br>
+            <a href="#top" class="right">Back to top</a>
+        </div>
+    </div>
+    <!-- SECTION TWO -->
+    <div class="row">
+        <hr>
+        <div class="small-12 columns">
+            <h2 class="section-head" id="section-2">
+                Short section headline <a class="anchor-link" href="#section-2">&#182;</a>
+            </h2>
+        </div>
+        <div class="small-12 columns">
+            <p class="section-chatter">
+                Chatter for this section goes here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, dolorum, tempora neque dolorem a illum quibusdam id debitis odit illo similique magnam deserunt tempore ea consectetur veritatis suscipit ab animi.
+            </p>
+        </div>
+        <div class="small-12 columns section-content">
+            <p>
+                <strong>Section Content [table, graph, whatnot] goes here.</strong>
+            </p>
+        </div>
+        <div class="clearfix">
+            <br>
+            <a href="#top" class="right">Back to top</a>
+        </div>
+    </div>
+    <!-- SECTION THREE -->
+    <div class="row">
+        <hr>
+        <div class="small-12 columns">
+            <h2 class="section-head" id="section-3">
+                Short section headline <a class="anchor-link" href="#section-3">&#182;</a>
+            </h2>
+        </div>
+        <div class="small-12 columns">
+            <p class="section-chatter">
+                Chatter for this section goes here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, dolorum, tempora neque dolorem a illum quibusdam id debitis odit illo similique magnam deserunt tempore ea consectetur veritatis suscipit ab animi.
+            </p>
+        </div>
+        <div class="small-12 columns section-content">
+            <p>
+                <strong>Section Content [table, graph, whatnot] goes here.</strong>
+            </p>
+        </div>
+        <div class="clearfix">
+            <br>
+            <a href="#top" class="right">Back to top</a>
+        </div>
+    </div>
+    <!-- ABOUT THE DATA SECTION -->
+    <div class="row">
+        <hr>
+        <h2 class="section-head" id="about-the-data">
+            About the data <a class="anchor-link" href="#about-the-data">&#182;</a>
+        </h2>
+        <div class="small-12 columns">
+            <p>
+                This is where you explain stuff about the data, e.g. where it came from and if there are any issues. Also a great place to show your work, such as how something was calculated.
+            </p>
+        </div>
+        <div class="clearfix">
+            <br>
+            <a href="#top" class="right">Back to top</a>
+        </div>
+        <hr>
+    </div>
+    <iframe src="http://www.delawareonline.com/services/cobrand/footer/" frameborder="0" scrolling="no" style="width:100%;height:232px;"></iframe>
+    <!-- jQuery -->
+    <script src="js/vendor/jquery.js"></script>
+    <!-- Foundation -->
+    <script src="js/foundation.min.js"></script>
+    <!-- Main -->
+    <script src="js/main.js"></script>
+    <!-- Page Info Json
+        Edit the variables in the JSON below to accurately reflect the
+        content of the interactive.
+    -->
+    <script type="json/pageinfo" class="pageinfo">
+        {"comma_ssts": "news,local",
+        "canonical": "http://php.delawareonline.com/news/2014/home-sales/",
+        "byline": "Patrick Sweet",
+        "contenttype": "story interactice",
+        "headline": "DATA: Where houses sell",
+        "ssts": "news/local",
+        "texttype": "interactice",
+        "googlenewskeyword": "real estate, delaware, homes",
+        "description": "",
+        "seotitle": "DATA: Where homes sell in Delaware",
+        "aws": "news/local",
+        "section_name": "news",
+        "full_url": "http://php.delawareonline.com/news/2014/home-sales/",
+        "blogname": "",
+        "published_date": "2014-01-03T08:44:44.0000000",
+        "excludeTransitionAd": true}
+    </script>
+</body>
+</html>
